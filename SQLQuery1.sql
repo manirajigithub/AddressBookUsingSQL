@@ -23,15 +23,15 @@ CREATE TABLE AddressBook
 
 INSERT INTO AddressBook([FirstName] ,[LastName],[Address] ,[City],[State],[zip],[PhoneNumber],[Email])
 	
-Values ('Ayub','khan','Dindigul','Dindigul','TN',561775,9887512345,'Ayubkhan@gmail.com'),
-			('Vijay','kumar','gandhi maidan','Patna','Bihar', 856475,965431287,'vijya87348@gmail.com'),
-			('Abhi','sri','colony','gurgaon','New Delhi',369342,897894234,'Abi@gmail.com'),
-			('Nithish','mehta','Nagar','Hyd','Maharashtra',534342,9874564234,'Nitmeh@gmail.com')
+Values ('Raji','Balusupai','Dindigul','Dindigul','TN',561775,9887512345,'Raji123@gmail.com'),
+			('Mani','Jammula','gandhi maidan','Krosur','Hyderabad', 856475,965431287,'mani87348@gmail.com'),
+			('Abhi','sri','colony','Amaravathi','Guntur',369342,897894234,'mana@gmail.com'),
+			('Manasa','mehta','Nagar','Hyd','Maharashtra',534342,9874564234,'vaishyugmail.com')
 		   
 
-UPDATE AddressBook Set  LastName = 'Khanna' WHERE FirstName = 'Vijay' ;
+UPDATE AddressBook Set  LastName = 'Jammula' WHERE FirstName = 'Mani' ;
 
-DELETE From AddressBook WHERE FirstName = 'Abhi';
+DELETE From AddressBook WHERE FirstName = 'Raji';
 	
 	SELECT * FROM AddressBook 
 
@@ -52,8 +52,8 @@ Order by FirstName ASc;
 ALTER TABLE AddressBook ADD Type varchar(30);
 SELECT * FROM Addressbook;
 
-UPDATE AddressBook Set Type = 'Friend' WHERE FirstName = 'Ayub' or FirstName = 'Nithish' ;
-UPDATE AddressBook Set Type = 'Family' WHERE FirstName = 'Vijay';
+UPDATE AddressBook Set Type = 'Friend' WHERE FirstName = 'Raji' or FirstName = 'Manasa' ;
+UPDATE AddressBook Set Type = 'Family' WHERE FirstName = 'Mani';
 SELECT * From Addressbook WHERE Type = 'Friend';
 
 SELECT COUNT (Type) From Addressbook WHERE Type = 'Friend';
